@@ -1,0 +1,51 @@
+service: fullstack-serverless-app
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  region: us-east-1
+
+functions:
+  createItem:
+    handler: src/handlers/createItem.createItem
+    events:
+      - http:
+          path: items
+          method: post
+
+  readItem:
+    handler: src/handlers/readItem.readItem
+    events:
+      - http:
+          path: items/{id}
+          method: get
+
+  updateItem:
+    handler: src/handlers/updateItem.updateItem
+    events:
+      - http:
+          path: items/{id}
+          method: put
+
+  deleteItem:
+    handler: src/handlers/deleteItem.deleteItem
+    events:
+      - http:
+          path: items/{id}
+          method: delete
+
+resources:
+  Resources:
+    ItemsTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: Items
+        AttributeDefinitions:
+          - AttributeName: id
+            AttributeType: S
+        KeySchema:
+          - AttributeName: id
+            KeyType: HASH
+        ProvisionedThroughput:
+          ReadCapacityUnits: 1
+          WriteCapacityUnits: 1
