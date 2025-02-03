@@ -1,8 +1,8 @@
 # Fullstack Serverless Application
 
-Este proyecto es una aplicacion fullstack construida usando Serverless Framework para el backend and Next.js para el frontend. Tambien se uso AWS DynamoDB para el almacenamiento de los datos y con un CRUD para el manejo de operaciones.
+Este proyecto es una aplicación fullstack construida utilizando **Serverless Framework** para el backend y **Next.js** para el frontend. También se usó **AWS DynamoDB** para el almacenamiento de datos, con un CRUD para la gestión de operaciones.
 
-## Project Structure
+## Estructura del Proyecto
 
 ```
 fullstack-serverless-app
@@ -39,46 +39,46 @@ fullstack-serverless-app
 
 ## Backend
 
-El backend es construido usando Serverless Framework y TypeScript. It consists of several handler functions that interact with a DynamoDB table:
+El backend está construido utilizando **Serverless Framework** y **TypeScript**. Consiste en varias funciones controladoras que interactúan con una tabla de **DynamoDB**:
 
-- **createItem.ts**: Handles the creation of new items.
-- **readItem.ts**: Retrieves items based on their ID.
-- **updateItem.ts**: Updates existing items.
-- **deleteItem.ts**: Deletes items based on their ID.
+- **createItem.ts**: Maneja la creación de nuevos elementos.
+- **readItem.ts**: Recupera elementos según su ID.
+- **updateItem.ts**: Actualiza los elementos existentes.
+- **deleteItem.ts**: Elimina elementos según su ID.
 
-### Setup
+### Configuración
 
-1. Navigate to the `backend` directory.
-2. Install dependencies: `npm install`.
-3. Deploy the backend: `serverless deploy`.
+1. Navegue hasta el directorio `backend`.
+2. Instale las dependencias: `npm install`.
+3. Despliegue el backend: `serverless deploy`.
 
 ## Frontend
 
-The frontend is built using Next.js and TypeScript. It provides a user interface for performing CRUD operations:
+La interfaz está construida utilizando **Next.js** y **TypeScript**. Proporciona una UI para realizar operaciones CRUD:
 
-- **index.tsx**: Main entry point with links to CRUD operations.
-- **create.tsx**: Form for creating new items.
-- **read.tsx**: Displays items from the database.
-- **update.tsx**: Form for updating existing items.
-- **delete.tsx**: Interface for deleting items.
+- **index.tsx**: Punto de entrada principal con enlaces a operaciones CRUD.
+- **create.tsx**: Formulario para crear nuevos elementos.
+- **read.tsx**: Muestra elementos de la base de datos.
+- **update.tsx**: Formulario para actualizar elementos existentes.
+- **delete.tsx**: Interfaz para eliminar elementos.
 
-### Setup
+### Configuración
 
-1. Navigate to the `frontend` directory.
-2. Install dependencies: `npm install`.
-3. Start the development server: `npm run dev`.
+1. Navegue hasta el directorio `frontend`.
+2. Instale las dependencias: `npm install`.
+3. Inicie el servidor de desarrollo: `npm run dev`.
 
-## GitHub Repository
+## Repositorio de GitHub
 
-This project is managed using Git. Follow these steps to set up your repository:
+Este proyecto se gestiona utilizando Git. Siga estos pasos para configurar su repositorio:
 
-1. Initialize a new Git repository: `git init`.
-2. Add remote origin: `git remote add origin <your-repo-url>`.
-3. Create a new branch for features: `git checkout -b feature/<feature-name>`.
-4. Commit your changes: `git commit -m "Your commit message"`.
-5. Push your branch: `git push origin feature/<feature-name>`.
-6. Create a pull request on GitHub to merge your changes into the main branch.
+1. Inicialice un nuevo repositorio de Git: `git init`.
+2. Agregue el origen remoto: `git remote add origin <su-repo-url>`.
+3. Cree una nueva rama para funciones: `git checkout -b feature/<feature-name>`.
+4. Confirme sus cambios: `git commit -m "Su mensaje de confirmación"`.
+5. Empuje su rama: `git push origin feature/<feature-name>`.
+6. Cree una solicitud de extracción en GitHub para fusionar sus cambios en la rama principal.
 
-## License
+## Licencia
 
-This project is licensed under the MIT License. See the LICENSE file for details.
+Este proyecto está bajo la licencia **MIT**. Consulte el archivo `LICENSE` para obtener más detalles.
